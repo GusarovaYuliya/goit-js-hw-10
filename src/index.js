@@ -1,0 +1,1 @@
+import { TheCatAPI } from "@thatapicompany/thecatapi";
