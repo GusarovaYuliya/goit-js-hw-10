@@ -5,7 +5,7 @@ import SlimSelect from 'slim-select'
 import 'slim-select/dist/slimselect.css';
 
 new SlimSelect({
-//   select: '#placeholder',
+  select: '#placeholder',
   settings: {
     placeholderText: 'Custom Placeholder Text',
   }
