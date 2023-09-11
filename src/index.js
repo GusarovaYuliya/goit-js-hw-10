@@ -4,6 +4,12 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import SlimSelect from 'slim-select'
 import 'slim-select/dist/slimselect.css';
 
+new SlimSelect({
+//   select: '#placeholder',
+  settings: {
+    placeholderText: 'Custom Placeholder Text',
+  }
+})
 const ref = {
     selector: document.querySelector('.breed-select'),
     divCatInfo: document.querySelector('.cat-info'),
@@ -20,7 +26,7 @@ let arrBreedsId = [];
 fetchBreeds()
 .then(data => {
        selector.innerHTML = data.map(item => {
-        return `<option value="${item.id}">${item.name}</option>`
+        return `<option data-placeholder="true"></option><option value="${item.id}">${item.name}</option>`
     }).join('');
 
     new SlimSelect({
